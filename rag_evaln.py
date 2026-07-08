@@ -1,4 +1,5 @@
 import os
+
 import pandas as pd
 import numpy as np
 from datasets import Dataset
@@ -6,7 +7,10 @@ from datasets import Dataset
 from src import config
 from src.rag_builder import build_pipeline
 from src.utils import get_gemini_gemma_llm, count_tokens
-
+from src.monitoring.metrics import (RAG_CONTEXT_PRECISION,
+                                    RAG_CONTEXT_RECALL,
+                                    RAG_FAITHFULNESS,
+                                    RAG_ANSWER_CORRECTNESS)
 
 from ragas import evaluate
 from ragas.metrics import context_recall,context_precision, faithfulness,answer_correctness
@@ -117,16 +121,30 @@ def run_evaluation():
         index=False
     )
     
+    avg_context_recall = np.mean(result["context_recall"])
+    avg_context_precision = np.mean(result["context_precision"])
+    avg_faithfulness = np.mean(result["faithfulness"])
+    avg_ans_correctness = np.mean(result["answer_correctness"])
+
+    print("avg_context_recall->",avg_context_recall)
+    print("avg_context_precision->",avg_context_precision)
+    print("avg_faithfulness->",avg_faithfulness)
+
+    RAG_CONTEXT_PRECISION.set(avg_context_precision)
+    RAG_CONTEXT_RECALL.set(avg_context_recall)
+    RAG_FAITHFULNESS.set(avg_faithfulness)
+    RAG_ANSWER_CORRECTNESS.set(avg_ans_correctness)
+                                 
     experiment_result = {
         "chunking": config.CHUNKING_STRATEGY,
         "retrieval": config.RETRIEVAL_STRATEGY,
         "reranker": config.RERANK_TOP_K,
       
-        "context_recall": np.mean(result["context_recall"]),
-        "context_precision": np.mean(result["context_precision"]),
-        "faithfulness": np.mean(result["faithfulness"]),
-     
-       "notes" : "Distance Strategy - MAX_INNER_PRODUCT and search_type = similarity"
+        "context_recall": avg_context_recall,
+        "context_precision": avg_context_precision,
+        "faithfulness": avg_faithfulness,
+        "answer_correctness":avg_ans_correctness
+       
     }
 
    

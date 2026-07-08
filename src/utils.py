@@ -8,7 +8,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 def count_tokens(text,model=config.LLM_MODEL):
     try:
-        print("Model-->",model)
+        print("Model for count tokens-->",model)
         enc = tiktoken.encoding_for_model(model)
     except:
         enc = tiktoken.get_encoding("cl100k_base")

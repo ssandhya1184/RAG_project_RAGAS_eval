@@ -15,7 +15,7 @@ PROVIDER="google"
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 100
 
-CHUNKING_STRATEGY = "semantic" # options: fixed/semantic/hierarchical
+CHUNKING_STRATEGY = "fixed" # options: fixed/semantic/hierarchical
 
 RETRIEVAL_STRATEGY = "similarity" # options: similarity/ mmr / hybrid
 

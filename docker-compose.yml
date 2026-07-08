@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+
+    container_name: rag_chat_ui
+
+    ports:
+      - "8501:8501"
+
+    env_file:
+      - .env
+
+    restart: unless-stopped
+  
+  prometheus:
+    image: prom/prometheus:latest
+
+    container_name: prometheus
+
+    ports:
+      - "9090:9090"
+
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+
+    depends_on:
+      - ui
+
+    restart: unless-stopped

@@ -1,9 +1,6 @@
-chunking,retrieval,reranker,context_recall,context_precision,faithfulness,notes
-fixed,similarity,3,0.8666666666666667,0.6111111110638888,0.7666666666666666,"Distance Strategy - EUCLIDEAN"
-semantic,similarity,3,0.5747126436781609,0.6666666666,0.5333333333333333,"Distance Strategy - EUCLIDEAN"
-semantic,similarity,3,0.5747126436781609,0.6666666666,0.6666666666666666,"Distance Strategy - EUCLIDEAN"
-semantic,similarity,3,0.0,0.0,0.0,"Distance Strategy - MAX_INNER_PRODUCT and search_type = similarity with -.7 threshold"
-semantic,similarity,3,,0.6666666666,0.5333333333333333,Distance Strategy - MAX_INNER_PRODUCT and search_type = similarity
-semantic,similarity,3,0.5747126436781609,0.6666666666,0.5333333333333333,Distance Strategy - MAX_INNER_PRODUCT and search_type = similarity
-semantic,similarity,3,,0.6666666666,0.6666666666666666,Distance Strategy - MAX_INNER_PRODUCT and search_type = similarity
-semantic,similarity,3,0.3333333333333333,0.5277777777347222,0.8333333333333334,Distance Strategy - MAX_INNER_PRODUCT and search_type = similarity
+chunking,retrieval,reranker,context_recall,context_precision,faithfulness,answer_correctness
+semantic,similarity,3,0.3333333333333333,0.5277777777347222,0.8333333333333334,
+semantic,similarity,3,0.3333333333333333,0.5277777777347222,0.8333333333333334,
+fixed,similarity,3,0.6666666666666666,0.8611111110347222,1.0,0.6816898655738831
+semantic,similarity,3,0.3333333333333333,0.5277777777347222,0.8333333333333334,
+fixed,similarity,3,0.6666666666666666,0.8611111110347222,1.0,0.6816898655738831

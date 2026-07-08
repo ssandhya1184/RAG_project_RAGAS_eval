@@ -1,3 +1,4 @@
+"""
 {
         "question": "What is Optima Secure?",
         "question": "How much coverage does Optima Secure claim to provide overall?",
@@ -12,7 +13,6 @@
 
         "ground_truth": "It covers non-medical expenses like gloves, masks, and consumables during hospitalization."        
     },
-    """
     {
         
         "ground_truth": "Optima Secure claims to provide up to 4X coverage of the chosen base cover through Secure Benefit, Plus Benefit, Restore Benefit, and Protect Benefit."  
@@ -108,7 +108,7 @@
     {
         "question": "If hospitalization includes non-medical expenses, how are they handled?",
         "ground_truth": "Eligible non-medical consumables and expenses such as gloves, masks, and nebulizer kits are covered under the Protect Benefit with no deduction."  
-    },"""
+    },
     {
         "question": "Does the policy reduce benefits if a claim is made?",
         "ground_truth": "No. The brochure explicitly states that Plus Benefit increases coverage irrespective of claims made, and Restore Benefit replenishes the base cover after claims."  
@@ -129,3 +129,4 @@
         "question": "What are the standard exclusions in this policy?",
         "ground_truth": "The brochure pages provided do not include the policy exclusions section. Therefore, the standard exclusions cannot be determined from the brochure content provided."  
     } 
+    """
