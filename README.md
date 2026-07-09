@@ -1,18 +1,11 @@
 # 🏥 Insurance Policy RAG Assistant with RAGAS Evaluation & Observability.
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-
 ![Streamlit](https://img.shields.io/badge/Streamlit-UI-red)
-
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
-
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
-
 ![Prometheus](https://img.shields.io/badge/Prometheus-Monitoring-orange)
-
 ![Grafana](https://img.shields.io/badge/Grafana-Dashboard-F46800)
-
 ![AWS EC2](https://img.shields.io/badge/AWS-EC2-yellow)
-
 ![RAGAS](https://img.shields.io/badge/RAGAS-Evaluation-success)
 
 ## Problem Statement
@@ -63,29 +56,23 @@ Amazon EC2
 ## Monitoring
 
 ```text
-                User
+              User
 
-                 │
+                │
 
-         Streamlit UI
+        Streamlit UI(Port 8501)
 
-        (Port 8501)
+                │
 
-                 │
+        Metrics (:8001)
 
-         Metrics (:8001)
+                │
 
-                 │
+        Prometheus (Port 9090)
 
-          Prometheus
+                │
 
-        (Port 9090)
-
-                 │
-
-            Grafana
-
-        (Port 3000)
+        Grafana (Port 3000)
 ```
 
 ## Tech Stack
