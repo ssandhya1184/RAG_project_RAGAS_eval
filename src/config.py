@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-PDF_PATH = "data\optima-secure-brochure.pdf"
+PDF_PATH = "data/optima-secure-brochure.pdf"
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 

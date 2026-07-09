@@ -27,7 +27,7 @@ scrape_configs:
 
     static_configs:
       - targets:
-        - "ui:8501"
+        - "ui:8001"
        # The label name is added as a label `label_name=<label_value>` to any timeseries scraped from this config.
         labels:
           app: "rag-chat"

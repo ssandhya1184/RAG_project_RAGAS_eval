@@ -2,8 +2,13 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
+RUN apt-get update && \
+    apt-get install -y git && \
+    rm -rf /var/lib/apt/lists/*
+    
 # Copy dependency files first (better caching)
 COPY pyproject.toml uv.lock ./
+
 
 # Install uv and dependencies
 RUN pip install --no-cache-dir uv \
@@ -20,12 +25,4 @@ EXPOSE 8501
 
 # Run app
 #CMD ["uv", "run", "streamlit","run", "ui/chat_ui.py", "--server.address=0.0.0.0",  "--server.port=8501"]
-CMD [
-    "uv",
-    "run",
-    "streamlit",
-    "run",
-    "ui/1_Chat.py",
-    "--server.address=0.0.0.0",
-    "--server.port=8501"
-]
+CMD [ "uv","run", "streamlit", "run", "ui/1_Chat.py","--server.address=0.0.0.0", "--server.port=8501"]
