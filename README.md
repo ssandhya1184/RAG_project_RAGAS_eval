@@ -8,8 +8,15 @@
 ![AWS EC2](https://img.shields.io/badge/AWS-EC2-yellow)
 ![RAGAS](https://img.shields.io/badge/RAGAS-Evaluation-success)
 
-## Problem Statement
-Insurance policy documents are lengthy and difficult to navigate. This project implements a Retrieval-Augmented Generation (RAG) assistant that answers policy-related questions while evaluating retrieval quality using RAGAS and monitoring application health using Prometheus and Grafana.
+## 📖 Problem Statement
+
+Insurance policy documents are designed to be legally comprehensive rather than easy to read. Important details such as coverage limits, exclusions, waiting periods, and claim conditions are often spread across multiple sections and described using formal legal terminology. As a result, users frequently struggle to quickly locate and understand the information they need before making a purchasing decision.
+
+This project was inspired by my own experience while comparing health insurance plans. Although I could understand individual sections while reading the document, I often found myself revisiting the same pages to clarify questions that arose later. The lack of an interactive way to query policy documents made the decision-making process both time-consuming and confusing.
+
+To address this problem, I developed an AI-powered Insurance Policy Assistant using Retrieval-Augmented Generation (RAG). The assistant enables users to ask natural language questions about policy documents and receive accurate, context-grounded responses. In addition, the project evaluates retrieval quality using RAGAS and provides production-style observability through Prometheus and Grafana to monitor system performance and RAG pipeline metrics.
+
+## ✅ Goal: Simplify the process of understanding insurance policy documents by enabling users to interact with them conversationally instead of manually searching through lengthy legal text.
 
 ## Features
 - Multiple Chunking Strategies
@@ -131,6 +138,13 @@ Docker Compose
 ### RAG Evaluation Summary Page
 
 ![RAG Evaluation Summary](screenshots/RAG_Eval_Dashboard.png)
+
+### Prometheus Targets
+![Prometheus Targets](screenshots/Prometheus_Status.png)
+
+### Docker Containers
+![Docker Containers](screenshots/Containers.png)
+
 
 ## 📈 Monitoring (Grafana Dashboards)
 
