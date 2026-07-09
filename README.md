@@ -16,7 +16,9 @@ This project was inspired by my own experience while comparing health insurance 
 
 To address this problem, I developed an AI-powered Insurance Policy Assistant using Retrieval-Augmented Generation (RAG). The assistant enables users to ask natural language questions about policy documents and receive accurate, context-grounded responses. In addition, the project evaluates retrieval quality using RAGAS and provides production-style observability through Prometheus and Grafana to monitor system performance and RAG pipeline metrics.
 
-## ✅ Goal: Simplify the process of understanding insurance policy documents by enabling users to interact with them conversationally instead of manually searching through lengthy legal text.
+## ✅ Goal: 
+
+Simplify the process of understanding insurance policy documents by enabling users to interact with them conversationally instead of manually searching through lengthy legal text.
 
 ## Features
 - Multiple Chunking Strategies
@@ -107,9 +109,9 @@ docker compose build
 docker compose up -d
 
 ## AWS Deployment
-Docker Images
-EC2
-Docker Compose
+- Docker Images
+- EC2
+- Docker Compose
 
 ## Project Highlights
 - Built an end-to-end RAG application
