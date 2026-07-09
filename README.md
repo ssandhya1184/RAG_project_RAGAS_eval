@@ -56,23 +56,23 @@ Amazon EC2
 ## Monitoring
 
 ```text
-              User
+     User
 
-                │
+      │
 
-        Streamlit UI(Port 8501)
+Streamlit UI(Port 8501)
 
-                │
+      │
 
-        Metrics (:8001)
+Metrics (:8001)
 
-                │
+      │
 
-        Prometheus (Port 9090)
+Prometheus (Port 9090)
 
-                │
+      │
 
-        Grafana (Port 3000)
+Grafana (Port 3000)
 ```
 
 ## Tech Stack
@@ -124,7 +124,13 @@ Docker Compose
 - Deployed on AWS EC2
 
 ## Screenshots
+### Home Page
 
+![Chat UI](screenshots/ChatPage.png)
+
+### RAG Evaluation Summary Page
+
+![RAG Evaluation Summary](screenshots/RAG_Eval_Dashboard.png)
 
 ## 📈 Monitoring (Grafana Dashboards)
 
@@ -163,11 +169,15 @@ The dashboard provides visibility into the execution time of each stage of the R
 
 ### 📷 Dashboard Preview
 
-> *(Add screenshots of your Grafana dashboards here.)*
+### RAG Performance Dashboard
+![Performance](screenshots/Grafana_Tab1_Performance.png)
 
-- RAG Performance Dashboard
-- Token Analytics Dashboard
-- Pipeline Metrics Dashboard
+### Pipeline Metrics Dashboard
+![Pipeline Metrics](screenshots/Grafana_Tab2_Pipeline.png)
+
+### Token Analytics Dashboard
+![Token Usage](screenshots/Grafana_Tab3_TokenUsage.png)
+
 
 ## 🎯 RAG Evaluation (RAGAS)
 
@@ -205,5 +215,6 @@ The application includes a dedicated **Evaluation** page that displays:
 
 This enables comparison of different chunking, retrieval, and reranking strategies to identify the best-performing RAG configuration.
 
-> *(Add a screenshot of the Evaluation UI here.)*
+### RAG Evaluation Metrics Dashboard
+![RAG Quality](screenshots/Grafana_Tab4_RAG_Quality.png)
 
